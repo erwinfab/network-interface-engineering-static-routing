@@ -35,6 +35,8 @@ The scenario models a production infrastructure reconfiguration sequence where a
 ## 🛠️ High-Level Deployment and Configuration Steps
 
 **Step 1: Interface Diagnostics & Primary Static Provisioning**
+
+
 Audit the NetworkManager engine state variables via the machine console context to map active profiles and initialize the hardened network configuration structure.  
 
 * Query active network connection properties and device interface labels
@@ -54,6 +56,8 @@ Audit the NetworkManager engine state variables via the machine console context 
 ---
 
 **Step 2: Multi-Homed Routing Expansion & SSH Connection Cutover**
+
+
 Append the secondary administrative IP mapping block onto the target workspace profile configuration array.  
 
 * Append a secondary alias IPv4 target block without disturbing the existing matrix
@@ -75,6 +79,8 @@ Append the secondary administrative IP mapping block onto the target workspace p
 ---
 
 **Step 3: Enterprise Naming Realignment & Local Host Mapping**
+
+
 With the local console session open, configure persistent system identification parameters and inject localized canonical lookup rules.  
 
 * Reconfigure the system persistent FQDN globally as root (handling argument boundaries)
@@ -89,6 +95,8 @@ With the local console session open, configure persistent system identification 
 ---
 
 **Step 4: Environment Profile Rollback & Routing Recovery**
+
+
 To return the server node back to baseline testing conditions and restore standard network accessibility for the grading framework, terminate the temporary static layout and re-initialize the primary dynamic connection architecture.  
 
 * Audit the active connection profile handles recognized by NetworkManager
@@ -103,12 +111,17 @@ To return the server node back to baseline testing conditions and restore standa
 ## 📊 Verification and Testing
 
 **Step 1: Laboratory Compliance Execution**
+
+
 Return to your virtual workstation context terminal and trigger the programmatic laboratory script to evaluate runtime infrastructure setup checks.
 
 <img width="691" height="439" alt="image" src="https://github.com/user-attachments/assets/e726d815-ce49-48dd-8a43-65c6962f56d4" />
 
+---
 
 **Step 2: Sandbox Environment Teardown**
+
+
 De-provision local tracking mechanisms to return the deployment sandbox back to baseline conditions.
 
 <img width="763" height="190" alt="image" src="https://github.com/user-attachments/assets/886f6069-0670-477c-b8cf-14cd9028f8b8" />
