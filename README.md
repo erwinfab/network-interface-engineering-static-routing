@@ -41,14 +41,17 @@ Audit the NetworkManager engine state variables via the machine console context 
    * `nmcli connection show`
    * `nmcli device status`
 
+
 <img width="702" height="426" alt="image" src="https://github.com/user-attachments/assets/9492dba9-762d-400a-b99f-0bb0024ee722" />
 
 
 * Add a clean static connection profile bound to the discovered device interface as root
    * `nmcli connection add type ethernet con-name static ifname <INTERFACE_NAME> ipv4.addresses 172.25.250.111/24 ipv4.gateway 172.25.250.254 ipv4.dns 172.25.250.254 ipv4.method manual`
 
+
 <img width="1038" height="135" alt="image" src="https://github.com/user-attachments/assets/f9113853-3bfd-4113-b315-418f1dbeaf28" />
 
+---
 
 **Step 2: Multi-Homed Routing Expansion & SSH Connection Cutover**
 Append the secondary administrative IP mapping block onto the target workspace profile configuration array.  
@@ -57,20 +60,44 @@ Append the secondary administrative IP mapping block onto the target workspace p
    * `nmcli connection modify static +ipv4.addresses 172.25.250.211/24`
 
 
-⚠️ Critical Infrastructure Alert (SSH Session Freeze):Executing `nmcli connection up static` over a remote network shell immediately drops the active dynamic DHCP routing parameters (lab/Wired connection 1) to load the new static parameters. Because the active SSH connection relies on the old IP routing path, the remote terminal window instantly loses its route and freezes.  To resolve this lockout without resetting the node, administrators must shift away from network-dependent streams and attach directly to the system via the local graphical hypervisor console bridge (`virt-manager`). 
+⚠️ **Critical Infrastructure Alert** (*SSH Session Freeze*):Executing `nmcli connection up static` over a remote network shell immediately drops the active dynamic DHCP routing parameters (lab/Wired connection 1) to load the new static parameters. Because the active SSH connection relies on the old IP routing path, the remote terminal window instantly loses its route and freezes.  To resolve this lockout without resetting the node, administrators must shift away from network-dependent streams and attach directly to the system via the local graphical hypervisor console bridge (`virt-manager`). 
+
+
+<img width="539" height="377" alt="image" src="https://github.com/user-attachments/assets/a472c849-da7d-4206-93dd-e42313e886e0" />
+
 
 * Force connection profile activation securely inside the local server console
    * `nmcli connection up static`
 
+
 <img width="940" height="340" alt="image" src="https://github.com/user-attachments/assets/d0f6200d-37ad-428a-95ca-aab0dd94ca38" />
 
+---
 
 **Step 3: Enterprise Naming Realignment & Local Host Mapping**
+With the local console session open, configure persistent system identification parameters and inject localized canonical lookup rules.  
 
-<img width="886" height="761" alt="image" src="https://github.com/user-attachments/assets/07c7b927-d476-41cf-8af7-4db94b1fdfa6" />
+* Reconfigure the system persistent FQDN globally as root (handling argument boundaries)
+   * `hostnamectl set-hostname server-review4.lab4.example.com`
+
+* Inject local name translation records into the static host lookup engine
+   * `sudo sh -c 'echo "172.25.250.10 client-review4" >> /etc/hosts'`
 
 
-**Step 4:**
+ <img width="846" height="654" alt="image" src="https://github.com/user-attachments/assets/c3c3e7d1-556f-4d68-a5ae-a83771d7f9fc" />
+
+---
+
+**Step 4: Environment Profile Rollback & Routing Recovery**
+To return the server node back to baseline testing conditions and restore standard network accessibility for the grading framework, terminate the temporary static layout and re-initialize the primary dynamic connection architecture.  
+
+* Audit the active connection profile handles recognized by NetworkManager
+   * `nmcli connection show`
+
+* Re-activate the primary dynamic interface profile using the explicit system identifier
+   * `nmcli connection up "Wired connection 1"`
+ 
+<img width="883" height="236" alt="image" src="https://github.com/user-attachments/assets/d9754fdb-ce53-47bd-bc33-dc4258aad57b" />
 
 
 ## 📊 Verification and Testing
