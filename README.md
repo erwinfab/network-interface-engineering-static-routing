@@ -56,13 +56,16 @@ Append the secondary administrative IP mapping block onto the target workspace p
 * Append a secondary alias IPv4 target block without disturbing the existing matrix
    * `nmcli connection modify static +ipv4.addresses 172.25.250.211/24`
 
-* Trigger interface runtime state modifications to bring the profile online
+
+⚠️ Critical Infrastructure Alert (SSH Session Freeze):Executing `nmcli connection up static` over a remote network shell immediately drops the active dynamic DHCP routing parameters (lab/Wired connection 1) to load the new static parameters. Because the active SSH connection relies on the old IP routing path, the remote terminal window instantly loses its route and freezes.  To resolve this lockout without resetting the node, administrators must shift away from network-dependent streams and attach directly to the system via the local graphical hypervisor console bridge (`virt-manager`). 
+
+* Force connection profile activation securely inside the local server console
    * `nmcli connection up static`
 
+<img width="940" height="340" alt="image" src="https://github.com/user-attachments/assets/d0f6200d-37ad-428a-95ca-aab0dd94ca38" />
 
-<img width="1022" height="761" alt="image" src="https://github.com/user-attachments/assets/907e1a69-8c2d-4b57-b3cd-99943c8f9df2" />
 
-**Step 3:**
+**Step 3: Enterprise Naming Realignment & Local Host Mapping**
 
 <img width="886" height="761" alt="image" src="https://github.com/user-attachments/assets/07c7b927-d476-41cf-8af7-4db94b1fdfa6" />
 
