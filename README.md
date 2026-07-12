@@ -50,8 +50,8 @@ Audit the NetworkManager engine state variables via the machine console context 
 <img width="1038" height="135" alt="image" src="https://github.com/user-attachments/assets/f9113853-3bfd-4113-b315-418f1dbeaf28" />
 
 
-**Step 2: Multi-Homed Routing Expansion & Runtime Activation**
-Append the secondary administrative IP mapping block onto the target workspace profile configuration array and initialize the active profile runtime state.  
+**Step 2: Multi-Homed Routing Expansion & SSH Connection Cutover**
+Append the secondary administrative IP mapping block onto the target workspace profile configuration array.  
 
 * Append a secondary alias IPv4 target block without disturbing the existing matrix
    * `nmcli connection modify static +ipv4.addresses 172.25.250.211/24`
@@ -64,6 +64,7 @@ Append the secondary administrative IP mapping block onto the target workspace p
 
 **Step 3:**
 
+<img width="886" height="761" alt="image" src="https://github.com/user-attachments/assets/07c7b927-d476-41cf-8af7-4db94b1fdfa6" />
 
 
 **Step 4:**
