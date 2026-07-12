@@ -83,11 +83,11 @@ Append the secondary administrative IP mapping block onto the target workspace p
 
 With the local console session open, configure persistent system identification parameters and inject localized canonical lookup rules.  
 
-* Reconfigure the system persistent FQDN globally as root (handling argument boundaries)
+* Reconfigure the system persistent FQDN globally as `root` (handling argument boundaries)
    * `hostnamectl set-hostname server-review4.lab4.example.com`
 
 * Inject local name translation records into the static host lookup engine
-   * `sudo sh -c 'echo "172.25.250.10 client-review4" >> /etc/hosts'`
+   * `sh -c 'echo "172.25.250.10 client-review4" >> /etc/hosts'`
 
 
  <img width="846" height="654" alt="image" src="https://github.com/user-attachments/assets/c3c3e7d1-556f-4d68-a5ae-a83771d7f9fc" />
